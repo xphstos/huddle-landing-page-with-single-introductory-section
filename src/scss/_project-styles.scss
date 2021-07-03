@@ -1,0 +1,132 @@
+@use './mixins' as *;
+@use "sass:color" as *;
+
+body {
+	background: no-repeat url("../images/bg-desktop.svg") 100% / cover,
+		v("violet");
+
+	@media screen and (max-width: 1200px) {
+		background: no-repeat url("../images/bg-mobile.svg") 100% / cover,
+			v("violet");
+	}
+}
+
+.huddle {
+	padding: 0 max(40px, 50vw - 1280px / 2);
+	display: grid;
+	grid-template-columns: 670px 1fr;
+	grid-template-areas: "logo logo" "graphic header";
+	gap: 72px;
+
+	@media screen and (max-width: 1200px) {
+		grid-template-columns: 1fr;
+		grid-template-areas: "logo" "graphic" "header";
+		padding: 0 max(40px, 50vw - 592px / 2);
+	}
+
+	&__logo {
+		grid-area: logo;
+		width: 200px;
+		height: auto;
+		vertical-align: middle;
+	}
+
+	&__graphic {
+		width: 100%;
+		height: auto;
+		vertical-align: middle;
+	}
+
+	&-header {
+		margin-top: 32px;
+		align-self: start;
+		display: grid;
+		gap: 32px;
+		grid-template-rows: auto;
+		justify-items: start;
+
+		@media screen and (max-width: 1200px) {
+			text-align: center;
+			justify-items: center;
+		}
+	}
+
+	&__title {
+		font-size: 40px;
+	}
+
+	&__description {
+		opacity: 0.8;
+	}
+
+	&__cta {
+		padding: 16px 64px;
+		background-color: v("white");
+		color: v("violet");
+		font-family: Poppins, sans-serif;
+		font-size: inherit;
+		border: 0;
+		border-radius: 32px;
+		box-shadow: 0 12px 12px -8px scale(c("black"), $alpha: -50%);
+		transition: background-color 0.2s ease, color 0.2s ease,
+			box-shadow 0.2s ease;
+		cursor: pointer;
+
+		&:hover {
+			background-color: v("magenta");
+			color: v("white");
+			box-shadow: 0 12px 12px -8px scale(c("black"), $alpha: -80%);
+		}
+
+		@media screen and (max-width: 1200px) {
+			width: 70%;
+		}
+
+		@media screen and (max-width: 375px) {
+			width: 100%;
+		}
+	}
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 40px max(40px, 50vw - 1280px / 2);
+	margin: 0;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+
+	@media screen and (max-width: 1200px) {
+		position: static;
+		justify-content: center;
+		padding: 80px max(40px, 50vw - 1280px / 2) 0;
+	}
+
+	&__item {
+		list-style-type: none;
+
+		a {
+			display: block;
+			line-height: 0;
+		}
+
+		svg {
+			fill: v("white");
+			width: 40px;
+			height: 40px;
+			transition: fill 0.2s ease;
+		}
+
+		+ .social__item {
+			margin-left: 0.5rem;
+		}
+
+		&:hover {
+			svg {
+				fill: v("magenta");
+			}
+		}
+	}
+}

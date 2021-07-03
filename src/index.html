@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>
+			Frontend Mentor | Huddle landing page with single introductory section
+		</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./scss/style.scss" />
+	</head>
+	<body>
+		<svg width="0" height="0" style="display: none">
+			<symbol viewBox="0 0 20 20" id="facebook">
+				<path
+					d="M10 .5A9.5 9.5 0 00.5 10a9.5 9.5 0 009.5 9.5 9.5 9.5 0 009.5-9.5A9.5 9.5 0 0010 .5m0 18.137c-4.77 0-8.636-3.867-8.636-8.637S5.23 1.364 10 1.364a8.636 8.636 0 110 17.273m.858-10.688c0-.349.036-.536.573-.536h.719v-1.3H11c-1.38 0-1.866.65-1.866 1.743v.845h-.86V10h.86v3.887h1.723V10h1.149l.152-1.299h-1.302l.002-.752z"
+				></path>
+			</symbol>
+			<symbol viewBox="0 0 20 20" id="instagram">
+				<path
+					d="M9.969.594A9.406 9.406 0 00.563 10a9.406 9.406 0 009.406 9.406A9.406 9.406 0 0019.375 10 9.406 9.406 0 009.969.594m0 17.958c-4.723 0-8.551-3.829-8.551-8.552s3.829-8.551 8.551-8.551a8.552 8.552 0 110 17.103m2.565-12.828H7.403a1.71 1.71 0 00-1.71 1.71v5.131c0 .944.766 1.71 1.71 1.71h5.131a1.71 1.71 0 001.71-1.71v-5.13a1.71 1.71 0 00-1.71-1.711m-.855 1.283h1.283V8.29h-1.283V7.007zM9.969 8.29a1.71 1.71 0 11-.001 3.421 1.71 1.71 0 01.001-3.421m3.421 4.275a.855.855 0 01-.855.854H7.403a.855.855 0 01-.855-.854V9.573h.898a2.607 2.607 0 00-.043.427 2.565 2.565 0 005.13 0c0-.146-.02-.288-.043-.427h.898v2.992z"
+				></path>
+			</symbol>
+			<symbol viewBox="0 0 20 20" id="twitter">
+				<path
+					d="M14.467 6.707c-.34.198-.715.342-1.115.419a1.761 1.761 0 00-1.279-.545c-.969 0-1.754.773-1.754 1.727 0 .135.015.267.045.394a5.019 5.019 0 01-3.617-1.806 1.7 1.7 0 00-.238.868c0 .599.31 1.128.78 1.438a1.775 1.775 0 01-.794-.217v.021c0 .837.605 1.535 1.408 1.694a1.758 1.758 0 01-.792.029 1.75 1.75 0 001.638 1.199c-.6.464-1.356.739-2.179.739-.142 0-.281-.007-.418-.023a5.034 5.034 0 002.689.775c3.228 0 4.991-2.63 4.991-4.913 0-.075-.002-.149-.004-.223.342-.244.639-.547.875-.894-.316.137-.652.23-1.008.272.362-.213.641-.551.772-.954M10 .594A9.406 9.406 0 00.594 10 9.406 9.406 0 0010 19.406 9.406 9.406 0 1010 .594m0 17.958c-4.723 0-8.551-3.829-8.551-8.552S5.277 1.449 10 1.449a8.552 8.552 0 010 17.103"
+				></path>
+			</symbol>
+		</svg>
+
+		<section class="huddle">
+			<img class="huddle__logo" src="./images/logo.svg" alt="" />
+			<img
+				class="huddle__graphic"
+				src="./images/illustration-mockups.svg"
+				alt=""
+			/>
+			<header class="huddle-header">
+				<h1 class="huddle__title">Build The Community Your Fans Will Love</h1>
+				<p class="huddle__description">
+					Huddle re-imagines the way we build communities. You have a voice, but
+					so does your audience. Create connections with your users as you
+					engage in genuine discussion. Register
+				</p>
+				<button class="huddle__cta">Register</button>
+			</header>
+		</section>
+
+		<ul class="social">
+			<li class="social__item">
+				<a href="#">
+					<svg class="icon">
+						<use xlink:href="#facebook"></use>
+					</svg>
+				</a>
+			</li>
+			<li class="social__item">
+				<a href="#">
+					<svg class="icon">
+						<use xlink:href="#twitter"></use>
+					</svg>
+				</a>
+			</li>
+			<li class="social__item">
+				<a href="#">
+					<svg class="icon">
+						<use xlink:href="#instagram"></use>
+					</svg>
+				</a>
+			</li>
+		</ul>
+	</body>
+</html>
