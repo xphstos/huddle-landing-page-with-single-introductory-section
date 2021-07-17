@@ -6,4 +6,4 @@ This is a solution to the [Huddle landing page with single introductory section 
 
 ### Links
 
-- Solution URL: [https://612c1858666819e0199396839e3b4eb49f42923c.surge.sh/](https://612c1858666819e0199396839e3b4eb49f42923c.surge.sh/)
+- Solution URL: [https://5997c92109979a00a1d6bed08468f42f7578c71c.surge.sh/](https://5997c92109979a00a1d6bed08468f42f7578c71c.surge.sh/)
